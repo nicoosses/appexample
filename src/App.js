@@ -36,9 +36,9 @@ class App extends Component {
            
        
        <div className="Cards">
-          <CardExampleCard img={img1} title='Custom Design' subtitle='Customization 4 u' description='Mutual work, we specialize in achieving the design that you imagine' link='PACKAGE 1'/>
-          <CardExampleCard img={img2} title='Defined Designs' subtitle='Choose ur style' description='We have designs prepared for your project. Choose yours!' link='PACKAGE 2'/>
-          <CardExampleCard img={img3} title='Friendly Service' subtitle='Exclusive attention' description='Includes marketing proposals and creative ideas in addition to customer service by WhatsApp' link='PACKAGE 3'/>
+         <a href="#"> <CardExampleCard img={img1} title='Custom Design' subtitle='Customization 4 u' description='Mutual work, we specialize in achieving the design that you imagine' link='PACKAGE 1'/> </a>
+         <a href="#"> <CardExampleCard img={img2} title='Defined Designs' subtitle='Choose ur style' description='We have designs prepared for your project. Choose yours!' link='PACKAGE 2'/></a>
+         <a href="#"> <CardExampleCard img={img3} title='Friendly Service' subtitle='Exclusive attention' description='Includes marketing proposals and creative ideas for your Project' link='PACKAGE 3'/></a>
         </div>
         
         <div>

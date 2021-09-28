@@ -11,7 +11,7 @@ const NavBar = () => {
 
     return (
         
-      <nav className="NavBar navbar navbar-expand-lg navbar-light bg-light ">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light ml-auto mx-auto">
         <div className="container-fluid">
        
        
@@ -45,9 +45,11 @@ const NavBar = () => {
           </ul>
         </li>
       
-        <li> <a class="navbar-brand" href="#"><FontAwesomeIcon icon= {faShoppingCart}> </FontAwesomeIcon>10</a></li>
         
+       
+       <li className="liShop"> <a class="navbar-brand" href="#"><FontAwesomeIcon icon= {faShoppingCart}> </FontAwesomeIcon>10</a></li>
         
+   
 
       </ul>
           

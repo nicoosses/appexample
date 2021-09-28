@@ -1,14 +1,21 @@
 
-nav ul li { 
+nav ul { 
   display:inline-block;
   list-style:none;
   margin:10px;
   
+
   
 }
 
-.liShop{
-  text-align:end;
-
+li{
+      display: inline;
+      margin: 10px;
 }
+
+.liShop{
+   display:inline-flex;
+   
+}
+
 
