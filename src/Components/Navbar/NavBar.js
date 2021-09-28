@@ -1,7 +1,8 @@
+import React, { Component } from "react";
 import '../Navbar/NavBar.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -10,9 +11,9 @@ const NavBar = () => {
 
     return (
         
-      <nav className="navbar navbar-expand-lg navbar-light bg-light ">
+      <nav className="NavBar navbar navbar-expand-lg navbar-light bg-light ">
         <div className="container-fluid">
-        <a class="navbar-brand" href="#"><FontAwesomeIcon icon= {faHome}> </FontAwesomeIcon></a>
+       
        
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -43,7 +44,10 @@ const NavBar = () => {
             <li><a class="dropdown-item" href="#">Social Medias</a></li>
           </ul>
         </li>
-       
+      
+        <li> <a class="navbar-brand" href="#"><FontAwesomeIcon icon= {faShoppingCart}> </FontAwesomeIcon>10</a></li>
+        
+        
 
       </ul>
           

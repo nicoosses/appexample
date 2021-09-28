@@ -1,0 +1,13 @@
+.Header{
+    display:block;
+    min-height:20vh;
+    background-color:orange;
+    width:100%;
+    justify-content:center;
+    align-items:center;
+    
+}
+
+.Header{
+    color:black;
+}
