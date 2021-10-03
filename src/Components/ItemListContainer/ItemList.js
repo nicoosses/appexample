@@ -2,8 +2,9 @@ import React from 'react'
 import { Card, Icon, Image } from 'semantic-ui-react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle, faCube, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import './ItemList.css';
 
-const CardExampleCard = (props) => (
+const ItemList = (props) => (
   <div className="Cards">
     <Card>
         <Image src={props.img} wrapped ui={false} />
@@ -23,4 +24,4 @@ const CardExampleCard = (props) => (
   </div>
 )
 
-export default CardExampleCard
+export default ItemList
