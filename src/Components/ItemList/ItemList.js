@@ -1,6 +1,5 @@
 import React from 'react'
 import { Card, Icon, Image } from 'semantic-ui-react'
-import { ItemListContainer } from '../ItemListContainer/ItemListContainer';
 import './ItemList.css';
              //5
 const ItemList = ({data}) => (

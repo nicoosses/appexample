@@ -1,7 +1,6 @@
 import React from 'react';
 import '../Header/Header.css';
 import banner from '../Header/Banner.png';
-import NavBar from "../Navbar/NavBar";
 
 
 const Header = (prop) => {
