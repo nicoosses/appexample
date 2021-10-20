@@ -1,34 +1,31 @@
 // 1
 import React, { useState, useEffect } from 'react';
 import ItemList from '../ItemList/ItemList';
-import './ItemListContainer.css';
+import axios from 'axios';
 import Spinner from '../Spinner/Spinner'
+import './ItemListContainer.css';
 import { Link } from 'react-router-dom';
 
-
 export const ItemListContainer = () => {  
-    const[users, setUsers] = useState([]);
+
+    const [users, setUsers] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
+    
     useEffect(() => {   
-          fetch('https://api.github.com/users')
-        .then((response) => response.json())
-        .then((data) => setUsers(data));
-        setTimeout(() => {setIsLoading(false);},3000); //CLAVE EL TIMEOUT PARA SIMULAR LA CARGA DE IMAGENES
-      }, []);
+        axios(`https://thronesapi.com/api/v2/Characters`).then((json) =>  
+          setUsers(json.data));
+        setTimeout(() => {setIsLoading(false);},3000); 
+      });
       
     return (
-
         <div className="ItemList-Container">
-          {/* //4 */}
           {users.map((user) => {
                 return (
                         <div key={user.id}>
-                          <Link to={`/detail/${user.id}`}>           
-                            {/* <ItemList data={user} />                   */}
+                          <Link to={`/detail/${user.id}`}>                          
                             {isLoading ? <Spinner/> : <ItemList data={user}/>}  
                           </Link>
-                         
                         </div> 
                 );
             })}

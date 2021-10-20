@@ -1,22 +1,22 @@
 import React from 'react'
 import { Card, Icon, Image } from 'semantic-ui-react'
 import './ItemList.css';
-             //5
+            
 const ItemList = ({data}) => (
-              //6
+              
   <div className="Cards">
     <Card>
-        <Image src={data.avatar_url} wrapped ui={false} />
+        <Image src={data.imageUrl} wrapped ui={false} />
         <Card.Content>
-        <Card.Header>{data.login}</Card.Header>
+        <Card.Header>{data.id}</Card.Header>
         <Card.Meta>
-            <span className='date'>{data.id}</span>
+            <span>{data.fullName}</span>
         </Card.Meta>
         <Card.Description>
-            {data.url}
+            {data.title}
         </Card.Description>
         </Card.Content>
-        <Card.Content extra>
+           <Card.Content extra>
         </Card.Content>
     </Card>
   </div>

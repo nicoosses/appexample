@@ -3,46 +3,32 @@ import axios from 'axios';
 import { Card, Image } from 'semantic-ui-react';
 import './ItemDetailContainer.css';
 
-
-const UserDetail = ({ match }) => {
-	//  console.log('MATCH', match);
-	let userID = match.params.id;
-	const [usuario, setUser] = useState([]);
+const ItemDetailContainer = ({ match }) => {
+	
+	let itemID = match.params.id;
+	const [user, setUser] = useState([]);
 
 	useEffect(() => {
-		axios(`https://api.github.com/users/${userID}`).then((res) =>
-			setUser(res.data)
+		axios.get(`https://thronesapi.com/api/v2/Characters/${itemID}`).then((res) => setUser(res.data)
 		);
-	}, [userID]);
-
-
+	}, [itemID]);
+	
 	return (
-		<div>
-
-		<div className='ItemDetail' style={{ padding: 40 }}>
+			<div className='ItemDetail' style={{ padding: 40 }}>
 			<h1>User Detail</h1>
-			console.log(usuario);
-				{/* <h2>User Id: {usuario.login}</h2>
-				<h2>User name: {usuario.login}</h2> */}
-				
-					 <Card key={usuario.id}>
-						<Image src={usuario.avatar_url} wrapped ui={false} />
+					 <Card key={user.id}>
+						<Image src={user.imageUrl} wrapped ui={false} />
 						<Card.Content>
-							<Card.Header>{usuario.login}</Card.Header>
+							<Card.Header>{user.id}</Card.Header>
 							<Card.Meta>
-								<span>{usuario.type}</span>
+								<span>{user.fullName}</span>
 							</Card.Meta>
-							<Card.Description>{usuario.url}</Card.Description>
+							<Card.Description>{user.title}</Card.Description>
 						</Card.Content>
 					</Card> 
 		</div>
-
-		</div>
-		
-
-
 	);
 	
 };
 
-export default UserDetail;
+export default ItemDetailContainer;
