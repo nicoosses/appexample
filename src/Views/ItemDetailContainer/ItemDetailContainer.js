@@ -5,25 +5,25 @@ import './ItemDetailContainer.css';
 
 const ItemDetailContainer = ({ match }) => {
 	
-	let itemID = match.params.id;
-	const [user, setUser] = useState([]);
+	let pjID = match.params.id;
+	const [pj, setPj] = useState([]);
 
 	useEffect(() => {
-		axios.get(`https://thronesapi.com/api/v2/Characters/${itemID}`).then((res) => setUser(res.data)
+		axios.get(`https://thronesapi.com/api/v2/Characters/${pjID}`).then((res) => setPj(res.data)
 		);
-	}, [itemID]);
+	}, [pjID]);
 	
 	return (
 			<div className='ItemDetail' style={{ padding: 40 }}>
 			<h1>User Detail</h1>
-					 <Card key={user.id}>
-						<Image src={user.imageUrl} wrapped ui={false} />
+					 <Card key={pj.id}>
+						<Image src={pj.imageUrl} wrapped ui={false} />
 						<Card.Content>
-							<Card.Header>{user.id}</Card.Header>
+							<Card.Header>{pj.id}</Card.Header>
 							<Card.Meta>
-								<span>{user.fullName}</span>
+								<span>{pj.fullName}</span>
 							</Card.Meta>
-							<Card.Description>{user.title}</Card.Description>
+							<Card.Description>{pj.title}</Card.Description>
 						</Card.Content>
 					</Card> 
 		</div>

@@ -8,23 +8,23 @@ import { Link } from 'react-router-dom';
 
 export const ItemListContainer = () => {  
 
-    const [users, setUsers] = useState([]);
+    const [pjs, setPjs] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
     
     useEffect(() => {   
         axios(`https://thronesapi.com/api/v2/Characters`).then((json) =>  
-          setUsers(json.data));
+          setPjs(json.data));
         setTimeout(() => {setIsLoading(false);},3000); 
       });
       
     return (
         <div className="ItemList-Container">
-          {users.map((user) => {
+          {pjs.map((pj) => {
                 return (
-                        <div key={user.id}>
-                          <Link to={`/detail/${user.id}`}>                          
-                            {isLoading ? <Spinner/> : <ItemList data={user}/>}  
+                        <div key={pj.id}>
+                          <Link to={`/detail/${pj.id}`}>                          
+                            {isLoading ? <Spinner/> : <ItemList data={pj}/>}  
                           </Link>
                         </div> 
                 );
