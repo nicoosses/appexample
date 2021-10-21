@@ -23,7 +23,7 @@ export const ItemListContainer = () => {
           {pjs.map((pj) => {
                 return (
                         <div key={pj.id}>
-                          <Link to={`/detail/${pj.id}`}>                          
+                          <Link to={`/ItemDetailContainer/${pj.id}`}>                          
                             {isLoading ? <Spinner/> : <ItemList data={pj}/>}  
                           </Link>
                         </div> 

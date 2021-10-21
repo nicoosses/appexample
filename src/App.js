@@ -13,8 +13,8 @@ import Home from './Views/Home';
 import About from './Views/About';
 import Contacto from './Views/Contacto';
 import Shop from './Views/Shop';
-import ItemDetailContainer from './Views/ItemDetailContainer/ItemDetailContainer';
-
+import ItemDetailContainer from './Views/ItemDetailContainer';
+import ItemViewDetail from './Components/ItemViewDetail/ItemViewDetail';
 
 
 export const App = () => {
@@ -33,15 +33,17 @@ export const App = () => {
             <Route path='/About' component={About}/>
             <Route path='/Contacto' component={Contacto}/>
             <Route path='/Shop' component={Shop}/>
-            <Route path='/detail/:id' component={ItemDetailContainer}/>
+            <Route path='/ItemDetailContainer/:id' component={ItemViewDetail}/>
+          
+
           </Switch>
           
-          
+        
             
        
               <ItemListContainer/>
            
-             <ItemCount stock="5" initial="1" />  
+           
 
         </div>
 

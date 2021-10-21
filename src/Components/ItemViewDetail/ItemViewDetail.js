@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Card, Image } from 'semantic-ui-react';
-import './ItemDetailContainer.css';
+import ItemCount from '../ItemCount/ItemCount';
 
-const ItemDetailContainer = ({ match }) => {
+const ItemViewDetail = ({ match }) => {
 	
 	let pjID = match.params.id;
 	const [pj, setPj] = useState([]);
@@ -14,7 +14,7 @@ const ItemDetailContainer = ({ match }) => {
 	}, [pjID]);
 	
 	return (
-			<div className='ItemDetail' style={{ padding: 40 }}>
+			<div className='ItemViewDetail' style={{ padding: 40 }}>
 			<h1>User Detail</h1>
 					 <Card key={pj.id}>
 						<Image src={pj.imageUrl} wrapped ui={false} />
@@ -25,10 +25,11 @@ const ItemDetailContainer = ({ match }) => {
 							</Card.Meta>
 							<Card.Description>{pj.title}</Card.Description>
 						</Card.Content>
+						<ItemCount stock="10" initial={0} onAdd={(counter) => onAdd(counter)} />  
 					</Card> 
 		</div>
 	);
 	
 };
 
-export default ItemDetailContainer;
+export default ItemViewDetail;

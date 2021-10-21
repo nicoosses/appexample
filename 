@@ -1,0 +1,65 @@
+[33mcommit 7892d1171e4cb320e0cd947556e69b851b79e219[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: nicoosses <jnicoosses@gmail.com>
+Date:   Wed Oct 20 14:09:19 2021 -0300
+
+    Primer entrega proyecto final desafios 6 y 7 funcionando
+
+[33mcommit 1e6c51793d6c6e5f29286ff0bcd8463a1ef1389a[m
+Author: nicoosses <jnicoosses@gmail.com>
+Date:   Wed Oct 20 14:06:49 2021 -0300
+
+    Primera entrega proyecto final, funcioonna!!
+
+[33mcommit bce908a37138b4af5e66ab694fbceb7ac2560d7f[m
+Author: nicoosses <jnicoosses@gmail.com>
+Date:   Tue Oct 19 14:50:48 2021 -0300
+
+    ItemDetail !
+
+[33mcommit 8d12db430c8f380ea9bef540d78225b096eef2ff[m
+Author: nicoosses <jnicoosses@gmail.com>
+Date:   Mon Oct 18 22:29:58 2021 -0300
+
+    desafio Item Detail
+
+[33mcommit ae6d7d5476c80993547a5cca641fe7cf1b6745c7[m
+Author: nicoosses <jnicoosses@gmail.com>
+Date:   Mon Oct 11 23:52:50 2021 -0300
+
+    Views y Routing - Orden de Estructura del trabajo - Css Cards
+
+[33mcommit eca883d9a3c5cf82b83ff074932fa21fd20c7470[m
+Author: nicoosses <jnicoosses@gmail.com>
+Date:   Wed Oct 6 00:34:26 2021 -0300
+
+    Desafio 6 Asyncronic Fetch y Map
+
+[33mcommit f994916597c3fa05e305902a2a9a0eeac0a4bc71[m
+Author: nicoosses <jnicoosses@gmail.com>
+Date:   Sun Oct 3 18:40:02 2021 -0300
+
+    Desafio Componentes II
+
+[33mcommit a756b146c5278be478a4b04f44d47f54e48fd0ed[m
+Author: nicoosses <jnicoosses@gmail.com>
+Date:   Mon Sep 27 22:02:49 2021 -0300
+
+    Desafio 3 cards + Cart Icon
+
+[33mcommit 2c5bebef3f82792226cc53e066fc3792309935e0[m
+Author: nicoosses <jnicoosses@gmail.com>
+Date:   Mon Sep 27 21:43:19 2021 -0300
+
+    Desafio 3, Cards + Cart Icon
+
+[33mcommit 9b78e95435ba6860cc903bbf977ea35811bf59f7[m
+Author: nicoosses <jnicoosses@gmail.com>
+Date:   Sun Sep 26 18:03:35 2021 -0300
+
+    Desafio 2 NavBar Component
+
+[33mcommit 3d1220fe73dbb0d50a3b519b126dc3c179db6392[m
+Author: nicoosses <jnicoosses@gmail.com>
+Date:   Wed Sep 22 21:10:35 2021 -0300
+
+    Initialize project using Create React App

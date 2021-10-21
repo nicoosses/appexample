@@ -1,31 +1,24 @@
 import React, { useState } from "react";
 
 
+const ItemCount = (props) => {
 
-const ItemCount = ({stock , initial}) => {
-
-  const [counter, setearContador] = useState(parseInt(initial));
+  const [counter, setearContador] = useState(props.initial);
   
- 
-  var stock = 10;
+  
 
-  const onAdd = () => {
-    if (counter < stock){
+  const addItem = () => {
+    if (counter < props.stock){
     setearContador(counter + 1) ;}
 
-    else{
-    return alert("no queda mas stock")
-    }
+   
     
 
   };
 
   const handleCounterDown = () => {
-    if(counter >0){
-    setearContador(counter - 1) ;}
-    else{
-      return alert("no puedes quitar mas productos del carrito")
-    }
+    if(counter > 0){
+       setearContador(counter - 1) ;}
     
    
   };
@@ -34,11 +27,17 @@ const ItemCount = ({stock , initial}) => {
 
     return (        
           <div className="CounterSection">
-                <p>Stock: {stock}</p>
-                <p>Contador: {counter}</p>
+                <p>Stock: {props.stock}</p>
+                
                   <div className="btn-section">
-                    <button onClick={onAdd}>Incrementar</button> 
-                    <button onClick={handleCounterDown}>Decrementar</button> 
+                    <button onClick={handleCounterDown}>-</button> 
+                    <p>{counter}</p>
+                    <button onClick={addItem}>+</button> 
+                  </div>
+
+                  <div>
+                    <button className="AddtoCart" onClick={() => props.onAdd(counter)}>Agregar al carrito</button>
+                    <p>Stock disponible: {props.stock}</p>
                   </div>
           </div> 
     );
