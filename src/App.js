@@ -34,7 +34,7 @@ export const App = () => {
             <Route path='/Contacto' component={Contacto}/>
             <Route path='/Shop' component={Shop}/>
             <Route path='/ItemDetailContainer/:id' component={ItemViewDetail}/>
-          
+                   
 
           </Switch>
           

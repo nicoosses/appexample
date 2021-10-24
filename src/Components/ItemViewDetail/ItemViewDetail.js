@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Card, Image } from 'semantic-ui-react';
 import ItemCount from '../ItemCount/ItemCount';
+import './ItemViewDetail.css';
 
 const ItemViewDetail = ({ match }) => {
 	
@@ -25,9 +26,9 @@ const ItemViewDetail = ({ match }) => {
 							</Card.Meta>
 							<Card.Description>{pj.title}</Card.Description>
 						</Card.Content>
-						<ItemCount stock="10" initial={0} onAdd={(counter) => onAdd(counter)} />  
+						<ItemCount stock="10" initial={0} maxValue={10} minValue={0}/>  
 					</Card> 
-		</div>
+			</div>
 	);
 	
 };
