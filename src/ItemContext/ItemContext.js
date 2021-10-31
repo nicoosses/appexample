@@ -10,17 +10,28 @@ export const PjProvider = ({ children }) => {
 
     const addItem = () => {
 
+        if(index < 0){
+            setPjCart([...pjCart, addpj]);
+        } 
+         else{
+             let quantityNew = parseInt(pjCart[index].quantity) + parseInt(addpj.quantity);
+             pjCart[index].quantity = parseInt(quantityNew);
+             setPjCart([...pjCart]);
+         }
 
     }
 
     const removeItem = () => {
-     
+
+        const newDat = pjCart.filter(obj => obj.id != key);
+        setPjCart([...newDat]);
         
     }
 
     const clearItem = () => {
 
-        
+         setPjCart([]);
+         
     }
 
     
