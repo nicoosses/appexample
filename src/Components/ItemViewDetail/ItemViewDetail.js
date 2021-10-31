@@ -1,19 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { Card, Image } from 'semantic-ui-react';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemViewDetail.css';
 
+import { PjProvider } from '../../ItemContext/ItemContext';
+
 const ItemViewDetail = ({ match }) => {
 	
 	let pjID = match.params.id;
 	const [pj, setPj] = useState([]);
+	
+
+
+
 
 	useEffect(() => {
 		axios.get(`https://thronesapi.com/api/v2/Characters/${pjID}`).then((res) => setPj(res.data)
 		);
 	}, [pjID]);
 	
+
+
+
+
 	return (
 			<div className='ItemViewDetail' style={{ padding: 40 }}>
 			<h1>User Detail</h1>

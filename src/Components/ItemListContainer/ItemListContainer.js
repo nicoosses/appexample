@@ -10,7 +10,7 @@ export const ItemListContainer = () => {
 
     const [pjs, setPjs] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-
+    const [pjCart, setPjCart] = useState ([]);
     
     useEffect(() => {   
         axios(`https://thronesapi.com/api/v2/Characters`).then((json) =>  
@@ -23,8 +23,11 @@ export const ItemListContainer = () => {
           {pjs.map((pj) => {
                 return (
                         <div key={pj.id}>
+                          
                           <Link to={`/ItemDetailContainer/${pj.id}`}>                          
+                            
                             {isLoading ? <Spinner/> : <ItemList data={pj}/>}  
+                           
                           </Link>
                         </div> 
                 );

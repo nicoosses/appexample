@@ -26,9 +26,6 @@ const ItemCount = ({initial, maxValue, minValue, onAdd}) => {
 
   };
 
-
-  
-
     return (        
           <div className="CounterContainer">
             
@@ -36,10 +33,15 @@ const ItemCount = ({initial, maxValue, minValue, onAdd}) => {
                     <button onClick={decrementarStock} className="Btn" onAdd={counter-1}>-</button> 
                     <p>{counter}</p>
                     <button onClick={incrementarStock} className="Btn" onAdd={counter+1}>+</button> 
+                  
                   </div>
+
 
                   <div>
                      <p>Productos en Carrito: {counter}</p>
+                     <button> COMPRAR </button>
+                        <button> DESHACER </button>
+                        <button> LIMPIAR CARRITO </button>
                   </div>
           </div> 
     );
