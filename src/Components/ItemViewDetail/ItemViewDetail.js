@@ -3,6 +3,8 @@ import axios from 'axios';
 import { Card, Image } from 'semantic-ui-react';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemViewDetail.css';
+import {pjContext} from '../../ItemContext/ItemContext'
+
 
 import { PjProvider } from '../../ItemContext/ItemContext';
 
@@ -10,9 +12,9 @@ const ItemViewDetail = ({ match }) => {
 	
 	let pjID = match.params.id;
 	const [pj, setPj] = useState([]);
-	
-
-
+	const {initial} = useContext(pjContext);
+	const {minValue} = useContext(pjContext);
+	const {maxValue} = useContext(pjContext);
 
 
 	useEffect(() => {

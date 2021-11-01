@@ -1,47 +1,31 @@
-import React, { useState } from "react";
+import React, { useState , useContext } from "react";
+import { pjContext } from '../../ItemContext/ItemContext'
 
 
-const ItemCount = ({initial, maxValue, minValue, onAdd}) => {
+const ItemCount = ({stock, initial, onAdd }) => {
 
-  const [counter, setearContador] = useState(initial);
+  const {decrementarStock} = useContext(pjContext);
+  const {incrementarStock} = useContext(pjContext);
+  const {counter} = useContext(pjContext);
+
+  const { addItem } = useContext(pjContext);
+  const { clearItem } = useContext(pjContext);
   
-  
-
-  const decrementarStock = () => {
-    if(counter === minValue){
-      return alert("No puede pedir cantidades negativas")  ; 
-    }   
-    setearContador(counter-1);
-    
-
-  };
-
-  
-  const incrementarStock = () => {
-    if (counter === maxValue){
-      return alert("Cantidad maxima superada, comunicarse por ventas mayores");
-    }
-    setearContador(counter+1);
-   
-
-  };
 
     return (        
           <div className="CounterContainer">
             
                   <div className="CounterSection">
-                    <button onClick={decrementarStock} className="Btn" onAdd={counter-1}>-</button> 
+                    <button onClick={(incrementarStock)} className="Btn" > Agregar al carrito </button> 
                     <p>{counter}</p>
-                    <button onClick={incrementarStock} className="Btn" onAdd={counter+1}>+</button> 
+                    <button  onClick={(decrementarStock)} className="Btn" > Deshacer</button> 
                   
                   </div>
-
-
+ 
                   <div>
                      <p>Productos en Carrito: {counter}</p>
-                     <button> COMPRAR </button>
-                        <button> DESHACER </button>
-                        <button> LIMPIAR CARRITO </button>
+                        <button onClick={(clearItem)}> LIMPIAR CARRITO  </button>
+                         <button onClick={(addItem)}> COMPRAR  </button>
                   </div>
           </div> 
     );
